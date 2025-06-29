@@ -1,0 +1,274 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <title>Portfolio</title>  
+  <style>  
+    body {  
+      margin: 0;  
+      padding: 0;  
+      font-family: Arial, sans-serif;  
+      background-image: url('project/bk2.jpg');  
+      background-size: cover;  
+      background-position: center;  
+      background-repeat: no-repeat;  
+    }
+
+    .container {  
+      max-width: 1200px;  
+      margin: auto;  
+      padding: 20px;  
+      background: rgba(255, 255, 255, 0.85);  
+      border-radius: 15px;  
+    }
+
+    .hero {  
+      text-align: center;  
+      padding: 60px 20px;  
+    }
+
+    .hero h1 {  
+      font-size: 48px;  
+      background: linear-gradient(to right, #ff69b4, #ffe68b);  
+      -webkit-background-clip: text;  
+      -webkit-text-fill-color: transparent;  
+    }
+
+    .hero p {  
+      font-size: 20px;  
+      color: #333;  
+    }
+
+    .projects {  
+      padding: 50px 20px;  
+    }
+
+    .projects h2 {  
+      font-size: 32px;  
+      text-align: center;  
+      margin-bottom: 40px;  
+      background: linear-gradient(to right, #ff69b4, #ffe68b);  
+      -webkit-background-clip: text;  
+      -webkit-text-fill-color: transparent;  
+    }
+
+    .project-grid {  
+      display: grid;  
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+      gap: 30px;  
+    }
+
+    .project {  
+      background: #fff;  
+      padding: 15px;  
+      border-radius: 10px;  
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);  
+      text-align: center;  
+      transition: transform 0.3s ease;  
+    }
+
+    .project:hover {  
+      transform: scale(1.05);  
+    }
+
+    .project img {  
+      width: 100%;  
+      height: 180px;  
+      object-fit: cover;  
+      border-radius: 10px;  
+      margin-bottom: 15px;  
+    }
+
+    .project h3 {  
+      color: #ff69b4;  
+      margin-bottom: 10px;  
+    }
+
+    .project p {  
+      color: #444;  
+    }
+
+    .about {  
+      padding: 50px 20px;  
+      background: #ffe6d9;  
+      border-radius: 10px;  
+      margin-top: 40px;  
+      text-align: center;  
+    }
+
+    .about h2 {  
+      background: linear-gradient(to right, #ff69b4, #ffe68b);  
+      -webkit-background-clip: text;  
+      -webkit-text-fill-color: transparent;  
+    }
+
+    .about p {  
+      color: #333;  
+      font-size: 18px;  
+      line-height: 1.6;  
+    }
+
+    .contact {  
+      padding: 50px 20px;  
+      text-align: center;  
+    }
+
+    .contact h2 {  
+      background: linear-gradient(to right, #ff69b4, #ffe68b);  
+      -webkit-background-clip: text;  
+      -webkit-text-fill-color: transparent;  
+    }
+
+    .contact p {  
+      margin-bottom: 20px;  
+      font-size: 18px;  
+      color: #333;  
+    }
+
+    form {  
+      max-width: 600px;  
+      margin: auto;  
+    }
+
+    input, textarea {  
+      width: 100%;  
+      padding: 15px;  
+      margin-bottom: 20px;  
+      border: 1px solid #ccc;  
+      border-radius: 8px;  
+      font-size: 16px;  
+    }
+
+    button {  
+      padding: 12px 30px;  
+      background: linear-gradient(to right, #ff69b4, #ffe68b);  
+      border: none;  
+      font-size: 16px;  
+      color: #fff;  
+      border-radius: 8px;  
+      cursor: pointer;  
+      transition: background 0.3s ease;  
+    }
+
+    button:hover {  
+      background: linear-gradient(to right, #ffe68b, #ff69b4);  
+    }
+
+    /* Success Popup Styles */
+    #popupSuccess {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      color: #000;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      font-size: 18px;
+      font-weight: bold;
+      z-index: 9999;
+      animation: fadein 0.5s ease-in-out;
+    }
+
+    @keyframes fadein {
+      from { opacity: 0; transform: translate(-50%, -60%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .project img {
+        height: 150px;
+      }
+    }
+  </style>  
+</head>  
+  
+<body>  
+  <div class="container">  
+  
+    <!-- Hero Section -->  
+    <section class="hero">  
+      <h1>Welcome to Easysegz Web</h1>  
+      <p>We're a team of expert web developers dedicated to creating innovative solutions.</p>  
+    </section>  
+  
+    <!-- Projects Section -->  
+    <section class="projects">  
+      <h2>Our Projects</h2>  
+      <div class="project-grid">  
+        <div class="project">  
+          <img src="oln.jpg" alt="Project 1">  
+          <h3>Project 1</h3>  
+          <p>
+Create an e-commerce website allowing users to browse, select, and purchase products online.
+
+</p>  
+        </div>  
+        <div class="project">  
+          <img src="pro2.jpg" alt="Project 2">  
+          <h3>Project 2</h3>  
+          <p>
+Create a professional website showcasing business services/products, including homepage, services/products description, about us section, and contact information.</p>  
+        </div>  
+      </div>  
+    </section>  
+  
+    <!-- About Section -->  
+    <section class="about">  
+      <h2>About Us</h2>  
+      <p>We are a passionate web development team delivering innovative and user-friendly web experiences for clients across the globe.</p>  
+    </section>  
+  
+    <!-- Contact Section with working form -->  
+    <section class="contact">  
+      <h2>Get in Touch</h2>  
+      <p>Feel free to contact us for any web development project. We'd love to hear from you!</p>  
+      <form id="customForm" action="https://usebasin.com/f/5ba4347427b9" method="POST" enctype="multipart/form-data">  
+        <input type="text" name="name" placeholder="Your Name" required>  
+        <input type="email" name="email" placeholder="Your Email" required>  
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>  
+        <button type="submit">Send</button>  
+      </form>  
+
+      <!-- SUCCESS POPUP -->
+      <div id="popupSuccess">✅ Message sent successfully!</div>
+    </section>  
+  
+  </div>  
+  
+  <script>  
+    const form = document.getElementById("customForm");  
+    const popup = document.getElementById("popupSuccess");  
+  
+    form.addEventListener("submit", function(e) {  
+      e.preventDefault();  
+      const formData = new FormData(form);  
+  
+      fetch(form.action, {  
+        method: "POST",  
+        body: formData,  
+        headers: { Accept: "application/json" }  
+      })  
+      .then(response => {  
+        if (response.ok) {  
+          popup.style.display = "block";  
+          form.reset();  
+          setTimeout(() => {  
+            popup.style.display = "none";  
+          }, 5000);  
+        } else {  
+          alert("❌ Something went wrong. Please check your inputs.");  
+        }  
+      })  
+      .catch(() => alert("❌ Network error. Please try again."));  
+    });  
+  </script>  
+</body>  
+</html>

@@ -1,0 +1,332 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Easysegz Web - Creative Web Solutions</title>
+  <meta name="description" content="Easysegz Web builds modern, responsive websites with powerful features like e-commerce, contact forms, and expert design." />
+  <meta name="keywords" content="web development, Easysegz, e-commerce, responsive design, portfolio, coding" />
+  <meta name="author" content="Easysegz Web Team" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph for Facebook -->
+  <meta property="og:title" content="Easysegz Web - Your Digital Partner" />
+  <meta property="og:description" content="We create fast, beautiful, and user-friendly websites. Check out our features." />
+  <meta property="og:image" content="web/preview.jpg" />
+  <meta property="og:url" content="https://yourwebsite.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Easysegz Web" />
+  <meta name="twitter:description" content="Professional and creative website development solutions." />
+  <meta name="twitter:image" content="web/preview.jpg" />
+
+  <!-- You can add favicon here -->
+  <link rel="icon" href="web/logo.jpg" /> 
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #000000, #1c1c1c, #2f2f2f, #444);
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .profile-image, .right-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .text {
+      font-size: 20px;
+      background: linear-gradient(to bottom, #ff69b4, #ffe68b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+
+    .main-div {
+      margin-top: 100px;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .bold-text {
+      font-weight: bold;
+      background: linear-gradient(to bottom, #ff69b4, #ffe68b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tagline {
+      font-size: 18px;
+      margin-top: 10px;
+      background: linear-gradient(to bottom, #ff69b4, #ffe68b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .leaf, .leaf-form {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 20px;
+      border: 2px solid #ff69b4;
+    }
+
+    .leaf h2, .leaf p,
+    .leaf-form h2, .leaf-form label {
+      background: linear-gradient(to bottom, #ff69b4, #ffe68b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .leaf-form input, .leaf-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .leaf-form input[type="submit"] {
+      background: linear-gradient(to right, #ff69b4, #ffe68b);
+      color: #000;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .feature-item {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid #ff69b4;
+    }
+
+    .feature-item h3,
+    .feature-item p {
+      background: linear-gradient(to bottom, #ff69b4, #ffe68b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header {
+      margin: 40px auto 10px;
+      text-align: center;
+      font-size: 24px;
+      background: linear-gradient(to right, #ff69b4, #ffe68b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cta, .recent-websites-cta {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .cta button, .recent-websites-cta button {
+      padding: 10px 20px;
+      background: linear-gradient(to right, #ff69b4, #ffe68b);
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #000;
+    }
+
+    .section-blue, .section-white, .section-gold, .section-gray, .section-dark {
+      margin: 30px auto;
+      text-align: center;
+      padding: 20px;
+      font-size: 20px;
+      max-width: 600px;
+    }
+
+    .section-blue h2,
+    .section-white h2,
+    .section-gold h2,
+    .section-gray h2,
+    .section-dark h2 {
+      background: linear-gradient(to bottom, #ff69b4, #ffe68b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .contact-info {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact-info p {
+      background: linear-gradient(to bottom, #ff69b4, #ffe68b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .icons {
+      position: fixed;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .icons img {
+      width: 40px;
+      height: 40px;
+    }
+
+    @keyframes fadeInPop {
+      0% {
+        transform: translate(-50%, -50%) scale(0.6);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="profile-image" src="logo.jpg" alt="Logo" />
+    <span class="text">Easysegz <span class="bold-text">Web</span></span>
+    <a href="menu.html"><img class="right-image" src="menu.jpg" alt="Menu" /></a>
+  </div>
+
+  <div class="main-div">
+    <h2 class="bold-text">Easysegz Web</h2>
+    <p class="tagline">Building bridges to your digital dreams</p>
+  </div>
+
+  <div class="leaf">
+    <h2>About Easysegz</h2>
+    <p>
+      Empowering businesses and individuals to create stunning websites without coding knowledge.
+      Our expert team delivers innovative solutions and exceptional customer support.
+    </p>
+    <h2>Our Mission</h2>
+    <p>
+      To help businesses and individuals succeed online with ease, leveraging our expertise and technology to build beautiful websites.
+    </p>
+  </div>
+
+  <div class="header">FEATURES</div>
+
+  <div class="features-grid">
+    <div class="feature-item"><h3>Responsive Design</h3><p>Adapts to all devices</p></div>
+    <div class="feature-item"><h3>User Experience</h3><p>Smooth intuitive interfaces</p></div>
+    <div class="feature-item"><h3>Web Development</h3><p>Clean, efficient code</p></div>
+    <div class="feature-item"><h3>E-commerce</h3><p>Boost your sales</p></div>
+    <div class="feature-item"><h3>SEO</h3><p>Rank higher on search</p></div>
+    <div class="feature-item"><h3>Support</h3><p>24/7 assistance</p></div>
+  </div>
+
+  <a href="menu.html"><div class="cta"><button>Check more features</button></div></a>
+  <a href="ready.html"><div class="recent-websites-cta"><button>Recent websites</button></div></a>
+
+  <div class="section-blue"><h2>We make dreams true</h2></div>
+  <div class="section-white"><h2>Visit our website for coding help</h2></div>
+  <div class="section-gold"><h2>Websites that exceed expectations</h2></div>
+  <div class="section-gray"><h2>Experts in high-quality web solutions</h2></div>
+  <div class="section-dark"><h2>About Us</h2></div>
+
+  <div class="contact-info">
+    <p>WhatsApp:09168654138</p>
+    <p>Email: eazysegzeeb.com</p>
+  </div>
+
+  <div class="leaf-form">
+    <h2>Get in Touch</h2>
+    <form id="customForm" action="https://usebasin.com/f/5ba4347427b9" method="POST" enctype="multipart/form-data">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"></textarea><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div id="popupSuccess" style="
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1a1a1a;
+    border: 2px solid #ff69b4;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,105,180,0.5);
+    color: #ffe68b;
+    z-index: 9999;
+    text-align: center;
+    animation: fadeInPop 0.5s ease;
+  ">
+    <h2 style="margin-top: 0;">✅ Submitted Successfully!</h2>
+    <p>We'll contact you shortly. Thank you!</p>
+  </div>
+
+  <div class="icons">
+  <div class= "wha" onclick="window.open('https://wa.me/2349168654138', '_blank')"><img src="what.jpg" alt="WhatsApp"></a></div>
+    <a href="mailto:your-email@example.com"><img src="gmail.png" alt="Email"></a>
+  </div>
+
+  <script>
+    const form = document.getElementById("customForm");
+    const popup = document.getElementById("popupSuccess");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
+      })
+      .then(response => {
+        if (response.ok) {
+          popup.style.display = "block";
+          form.reset();
+          setTimeout(() => {
+            popup.style.display = "none";
+          }, 5000);
+        } else {
+          alert("Something went wrong. Try again.");
+        }
+      })
+      .catch(() => alert("Network error. Please try again."));
+    });
+  </script>
+</body>
+</html>
+
+    
